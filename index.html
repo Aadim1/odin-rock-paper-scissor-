@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Rock Paper Scissor</title>
+</head>
+
+<body>
+
+    <div class="title">
+        <div class="right">
+            <h3>ROCK</h3>
+            <h3>PAPER</h3>
+            <h3>SCISSORS</h3>
+        </div>
+
+        <div class="left">
+            <h4>SCORE</h4>
+            <p id='score'>0</p>
+        </div>
+    </div>
+
+    <div class="game">
+        <img style="position:absolute" src="./images/bg-triangle.svg" alt="">
+        <div class="icons">
+            <div class="top">
+                <img onclick="whoWon(1, 'paper')" class="paper" src="./images/icon-1.svg" alt="">
+                <img onclick="whoWon(2, 'scissor')" class="scissor" src="./images/icon-2.svg" alt="">
+            </div>
+            <div class="down">
+                <img onclick="whoWon(0, 'rock')" class="rock" src="./images//icon-0.svg" alt="">
+            </div>
+
+        </div>
+
+        <div onclick="document.getElementById('modal-bg').classList.remove('bg-active');" class="modal-bg" id='modal-bg'>
+            <div class="modal">
+                <div class="who-picked">
+                    <h2>You Picked</h2>
+                    <h2>Computer Picked</h2>
+                </div>
+
+                <div class="md-icons">
+                    <img id='player'>
+                    <h2 id='message'></h2>
+                    <img id='computer'>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
